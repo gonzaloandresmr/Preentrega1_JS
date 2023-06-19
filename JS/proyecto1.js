@@ -1,8 +1,8 @@
 //años de los mundiales
+let anho;
 let contador = 0;
 let anho_actual = 2023;
 let anho_inicio_mundiales = 1930;
-let anho;
 
 function calcularMundialesHasta(anho) {
   for (let i = anho_inicio_mundiales; i <= anho; i += 4) {
@@ -33,7 +33,7 @@ if (confirmacion_preg_1) {
     else{
       alert("Ingresa un valor válido")
     }
-  } while (anho > anho_actual || anho < anho_inicio_mundiales || anho === NaN);
+  } while (anho > anho_actual || anho < anho_inicio_mundiales || isNaN(anho));
 
   calcularMundialesHasta(anho);
 
@@ -42,5 +42,5 @@ if (confirmacion_preg_1) {
     mostrarMundialesTotales();
   }
 } else {
-  alert("Ok, entonces chao");
+  alert("Ok, entonces chau");
 }
