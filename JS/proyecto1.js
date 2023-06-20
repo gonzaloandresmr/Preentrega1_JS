@@ -30,10 +30,12 @@ if (confirmacion_preg_1) {
     else if(anho < anho_inicio_mundiales){
       alert("El primer mundial fue recién en " + anho_inicio_mundiales)  
     }
-    else{
+    else if (isNaN(anho)){
       alert("Ingresa un valor válido")
     }
-  } while (anho > anho_actual || anho < anho_inicio_mundiales || isNaN(anho));
+  } while (anho > anho_actual || anho < anho_inicio_mundiales || isNaN(anho)){
+    
+  }
 
   calcularMundialesHasta(anho);
 
